@@ -245,7 +245,24 @@ module.exports = function (grunt) {
           'fonts/*'
         ],
         dest: 'docs/dist'
+      },
+      css : {
+        expand  : true,
+        cwd     : 'dist/css/',
+        src     : '**',
+        dest    : '../www/microco_sm/static/css/',
+        flatten : true,
+        filter  : 'isFile',
+      },
+      js : {
+        expand  : true,
+        cwd     : 'dist/js/',
+        src     : '**',
+        dest    : '../www/microco_sm/static/js/',
+        flatten : true,
+        filter  : 'isFile',
       }
+
     },
 
     qunit: {
@@ -312,8 +329,12 @@ module.exports = function (grunt) {
         tasks: ['jshint:test', 'qunit']
       },
       less: {
-        files: 'less/*.less',
-        tasks: 'less'
+        files: ['less/*.less', 'less/microcosm_site/*.less'],
+        tasks: ['less','copy:css']
+      },
+      js : {
+        files : 'js/*.js',
+        tasks : ['concat', 'uglify', 'copy:js']
       }
     },
 
