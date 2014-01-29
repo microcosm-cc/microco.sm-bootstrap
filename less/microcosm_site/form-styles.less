@@ -1,0 +1,37 @@
+////////////////////////////////////////////
+//			templatetag: form_get_started			//
+////////////////////////////////////////////
+.form-get-started{
+	form{
+		background-color: #EEE;
+		padding: 5px;
+		margin:0 0 @padding-small-vertical;
+		display: inline-block;
+	}
+	label{
+		font-size: @font-size-small;
+		margin:0;
+	}
+	input[type=text]{
+		border: 0;
+		border-radius: 0;
+		min-width: 250px;
+	}
+	.btn{
+		border-radius:0;
+	}
+	//@SCREEN-MD-MIN
+	@media (min-width:@screen-sm-min){
+		form{
+			margin: @padding-large-vertical 0;
+		}
+		label{
+			width: 90px;
+			text-align: right;
+			vertical-align: middle;
+			padding-right:@padding-small-horizontal;
+			font-weight: 400;
+		}
+
+	}
+}
