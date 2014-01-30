@@ -329,8 +329,12 @@ module.exports = function (grunt) {
         tasks: ['jshint:test', 'qunit']
       },
       less: {
-        files: ['less/*.less', 'less/microcosm_site/*.less'],
-        tasks: ['less','copy:css']
+        files: [
+          'less/*.less',
+          'less/microcosm_site/*.less',
+          'less/microcosm_admin/*.less'
+        ],
+        tasks: ['less:compileCore','less:minify','copy:css']
       },
       js : {
         files : 'js/*.js',
