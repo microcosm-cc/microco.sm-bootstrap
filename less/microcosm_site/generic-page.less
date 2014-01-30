@@ -1,0 +1,50 @@
+.generic-page{
+	padding:@line-height-computed * 3 0 0;
+}
+.generic-page-content{
+	background-color:#fff;
+	border:1px solid #ccc;
+	border-radius:3px;
+	@media (min-width:@screen-sm-min){
+		max-width:720px;
+		margin-right:auto;
+		margin-left:auto;
+	}
+}
+.generic-page-header{
+	background-color:#eee;
+	padding:@line-height-computed*1.5 @line-height-computed;
+	border-radius:3px 3px 0 0;
+	h2{
+		font-size:@font-size-large;
+		margin:0;
+	}
+}
+.generic-page-body{
+	border-radius:0 0 3px 3px;
+	&>ul{
+		padding:0;
+		margin:0;
+		list-style: none;
+		border-radius:0 0 3px 3px;
+		&>li{
+			padding:@line-height-computed;
+			border-bottom:1px solid #eee;
+			&:last-child{
+				border-bottom:0;
+				border-radius:0 0 3px 3px;
+			}
+			li{
+				padding-bottom:@line-height-computed;
+			}
+		}
+	}
+	&>ol{
+		&>li{
+			padding:@line-height-computed;
+			li{
+				padding-bottom:@line-height-computed;
+			}
+		}
+	}
+}
