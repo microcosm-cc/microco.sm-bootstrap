@@ -1,3 +1,26 @@
 .navbar{
 	margin-bottom:0;
+	border-radius:0 !important;
+	border:0;
+}
+.navbar-nav{
+	font-family:'Lato', @font-family-sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: @font-size-small;
+	&>li{
+		&>a{
+			&.active{
+				background-color: @brand-danger;
+				color:#fff;
+				text-shadow:0 0 3px rgba(0,0,0,0.4);
+				&:hover,
+				&:focus{
+					background-color: @brand-danger;
+					color:#fff;
+				}
+			}
+
+		}
+	}
 }
