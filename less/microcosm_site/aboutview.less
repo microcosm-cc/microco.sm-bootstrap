@@ -23,26 +23,18 @@
 }
 
 .list-team{
-	padding:0;
-	margin:0 auto;
-	list-style: none;
-	overflow: auto;
-	width: 250px;
 	li{
-		float:left;
-		width:230px;
-		margin:0 @padding-small-horizontal*0.6 @line-height-computed;
-		&:last-child{
-			margin-right:0;
-		}
+		text-align: center;
 		img{
-			max-width:100%;
+			max-width:230px;
 			width:100%;
 			height:auto;
-			min-width:230px;
+			// min-width:230px;
 			min-height:230px;
 			background-color:#eee;
 			margin-bottom:@line-height-computed;
+			margin-left:auto;
+			margin-right:auto;
 		}
 
 	}
@@ -60,16 +52,13 @@
 	a{
 		font-size:@font-size-small;
 	}
-		// @SCREEN-MD-MIN
+		// @SCREEN-SM-MIN
 	@media (min-width:@screen-sm-min){
 		width:auto;
+		text-align: left;
 	}
 	// @SCREEN-MD-MIN
 	@media (min-width:@screen-md-min){
-		width:776px;
-		li{
-			margin:0 @padding-large-horizontal @line-height-computed;
-		}
 	}
 }
 

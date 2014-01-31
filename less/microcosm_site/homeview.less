@@ -16,14 +16,8 @@
 
 .slider-nav{
 	margin-bottom:@line-height-computed;
-	ul{
-		padding:0;
-		margin:0;
-		list-style: none;
-		overflow: auto;
+	&>ul{
 		&>li{
-			float:left;
-			width:25%;
 			padding-right:@padding-small-horizontal;
 			img{
 				float: left;
@@ -38,6 +32,7 @@
 }
 
 .slider-container{
+	margin-bottom:@line-height-computed * 2;
 	ul{
 		padding:0;
 		margin: 0;
@@ -56,4 +51,12 @@
 	text-align: center;
 	padding:@padding-large-vertical 0;
 	width:100%;
+}
+
+.showcase{
+	&>ul{
+		&>li{
+			text-align: center;
+		}
+	}
 }
