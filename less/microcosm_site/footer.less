@@ -115,12 +115,12 @@
 
 .base-footer-form{
 	font-size:@font-size-small;
-	float: right;
+
 	padding: 10px;
 	background-color: rgba(0, 0, 0, 0.3);
 	border-radius: 5px;
 
-	.glyphicon-envelope{
+	.glyphicon{
 		float: right;
 		font-size: 18px;
 		color: rgba(255, 255, 255, 0.1);
@@ -144,5 +144,8 @@
 	}
 	.btn{
 		font-size:@font-size-small;
+	}
+	@media (min-width:@screen-sm-min){
+		float: right;
 	}
 }

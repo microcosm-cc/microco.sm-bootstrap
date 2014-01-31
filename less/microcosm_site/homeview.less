@@ -5,12 +5,14 @@
 .jumbotron{
 	text-align: center;
 	padding:0;
-	height:375px;
+	height:320px;
 	display:table;
 	width:100%;
+	background-color:#71D2FF;
 	.jumbotron-text{
 		display: table-cell;
 		vertical-align: middle;
+		color:#16476F;
 	}
 }
 
@@ -22,6 +24,7 @@
 			img{
 				float: left;
 				margin-right:@padding-small-horizontal;
+				border-radius:3px;
 			}
 			p{
 				font-size:@font-size-small;
@@ -33,30 +36,81 @@
 
 .slider-container{
 	margin-bottom:@line-height-computed * 2;
-	ul{
+	&>ul{
 		padding:0;
-		margin: 0;
+		margin: 0 auto;
 		list-style: none;
+		max-width:@screen-md-min;
+		&>li{
+			border-radius: 3px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+			margin-bottom:@line-height-computed;
+			overflow: auto;
+			border-bottom:1px solid #ccc;
+			background-color: #F8FBFD;
+			background-image: -moz-linear-gradient( 90deg, rgb(237,242,245) 0%, rgb(248,251,253) 100%);
+		  background-image: -webkit-linear-gradient( 90deg, rgb(237,242,245) 0%, rgb(248,251,253) 100%);
+		  background-image: -ms-linear-gradient( 90deg, rgb(237,242,245) 0%, rgb(248,251,253) 100%);
+		}
+	}
+	@media (min-width:@screen-md-min){
+		&>ul{
+			overflow: auto;
+			padding-top:@line-height-computed/2;
+			&>li{
+				float:left;
+				width:48%;
+				margin-right:2%;
+				&:nth-child(2n){
+					margin-right:0;
+				}
+			}
+		}
 	}
 }
+
 .slider-slides{
 	position:relative;
-	height:386px;
-	background-color:#eee;
+	margin:@padding-small-horizontal;
+	border:1px solid #D7DFE6;
+	border-radius:5px;
+	background-color:#fff;
 }
 .slider-slides-text{
 	text-align: center;
-	position:absolute;
-	bottom: @line-height-computed;
-	text-align: center;
-	padding:@padding-large-vertical 0;
+	padding:@padding-large-vertical;
 	width:100%;
+	&>img{
+		margin:@line-height-computed 0;
+		width:100%;
+	}
+	p{
+		color:#666;
+	}
+	@media (min-width:@screen-sm-min){
+		&>img{
+			width:auto;
+		}
+	}
 }
 
 .showcase{
+	margin-bottom:@line-height-computed * 2;
 	&>ul{
 		&>li{
 			text-align: center;
+			img{
+				width:100%;
+			}
+		}
+	}
+	@media (min-width:@screen-md-min){
+		&>ul{
+			&>li{
+				img{
+					width:auto;
+				}
+			}
 		}
 	}
 }
