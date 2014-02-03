@@ -8,6 +8,9 @@
 	padding-bottom:@line-height-computed*2;
 }
 .dashboard-header{
+	h1{
+		margin: @line-height-computed 0 0;
+	}
 	h2{
 		margin:0;
 		font-size:@font-size-large;
@@ -88,7 +91,7 @@
 					border-radius:3px;
 					margin-bottom:@line-height-computed/2;
 				}
-				&>span{
+				&>span:not(.dashboard-icon-sprites){
 					font-weight:700;
 					display: block;
 					font-size:@font-size-small;
@@ -109,6 +112,7 @@
 	}
 }
 .dashboard-list{
+	clear:both;
 	padding:0;
 	margin:0;
 	list-style: none;
@@ -163,5 +167,39 @@
 		&>.form-group{
 			margin-bottom:@line-height-computed;
 		}
+	}
+}
+
+@dashboard-icon-width : 32px;
+@dashboard-icon-height : 32px;
+
+.dashboard-icon-sprites{
+	background:url('/static/img/dashboard-icon-sprites.png') no-repeat 0 0 transparent;
+	width:@dashboard-icon-width;
+	height:@dashboard-icon-height;
+	display:inline-block;
+}
+.dashboard-icon-name{
+	background-position:0 0;
+	&.active{
+		background-position:0 -@dashboard-icon-height;
+	}
+}
+.dashboard-icon-color{
+	background-position:-@dashboard-icon-width 0;
+	&.active{
+		background-position:-@dashboard-icon-width -@dashboard-icon-height;
+	}
+}
+.dashboard-icon-permissions{
+	background-position:-@dashboard-icon-width*2 0;
+	&.active{
+		background-position:-@dashboard-icon-width*2 -@dashboard-icon-height;
+	}
+}
+.dashboard-icon-notifications{
+	background-position:-@dashboard-icon-width*3 0;
+	&.active{
+		background-position:-@dashboard-icon-width*3 -@dashboard-icon-height;
 	}
 }
