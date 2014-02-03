@@ -1,5 +1,9 @@
+@dashboard-bg-color: #E0E7EC;
+@dashboard-text-color:#55646F;
+
+
 .dashboard{
-	background-color:#eee;
+	background-color:@dashboard-bg-color;
 	padding:@line-height-computed;
 	padding-bottom:@line-height-computed*2;
 }
@@ -9,9 +13,11 @@
 		font-size:@font-size-large;
 		display:inline;
 		font-weight:700;
+		color:@dashboard-text-color;
 	}
 	a{
 		font-size:@font-size-small;
+		color:lighten(@dashboard-text-color, 20%)
 	}
 }
 .dashboard-container{

@@ -8,12 +8,31 @@
 	height:320px;
 	display:table;
 	width:100%;
-	background-color:#71D2FF;
+
 	.jumbotron-text{
 		display: table-cell;
 		vertical-align: middle;
 		color:#16476F;
+		height:440px;
+		&>img{
+			margin-bottom:@line-height-computed;
+		}
+
 	}
+}
+#homeview-jumbotron{
+	background: url('/static/img/faces-1.png') repeat-x center 45px;
+	border-bottom: 1px solid #EEE;
+	margin-bottom:0;
+	.jumbotron-text{
+			.text-headline{
+			margin-top: 230px;
+		}
+	}
+}
+#homeview-body{
+	background-color: #ECF4F8;
+	padding-top:@line-height-computed;
 }
 
 .slider-nav{
@@ -25,6 +44,7 @@
 				float: left;
 				margin-right:@padding-small-horizontal;
 				border-radius:3px;
+				background-color:#fff;
 			}
 			p{
 				font-size:@font-size-small;
@@ -47,24 +67,12 @@
 			margin-bottom:@line-height-computed;
 			overflow: auto;
 			border-bottom:1px solid #ccc;
-			background-color: #F8FBFD;
-			background-image: -moz-linear-gradient( 90deg, rgb(237,242,245) 0%, rgb(248,251,253) 100%);
-		  background-image: -webkit-linear-gradient( 90deg, rgb(237,242,245) 0%, rgb(248,251,253) 100%);
-		  background-image: -ms-linear-gradient( 90deg, rgb(237,242,245) 0%, rgb(248,251,253) 100%);
+			background-color:#fff;
 		}
 	}
 	@media (min-width:@screen-md-min){
 		&>ul{
-			overflow: auto;
 			padding-top:@line-height-computed/2;
-			&>li{
-				float:left;
-				width:48%;
-				margin-right:2%;
-				&:nth-child(2n){
-					margin-right:0;
-				}
-			}
 		}
 	}
 }
@@ -72,9 +80,6 @@
 .slider-slides{
 	position:relative;
 	margin:@padding-small-horizontal;
-	border:1px solid #D7DFE6;
-	border-radius:5px;
-	background-color:#fff;
 }
 .slider-slides-text{
 	text-align: center;
