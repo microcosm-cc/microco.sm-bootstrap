@@ -1,17 +1,36 @@
+#navbar-about.active,
+#about-jumbotron{
+	background-color:#81C8FF;
+}
+
 .jumbotron-list{
 	.center-block();
 	overflow: auto;
 	margin-top:@line-height-computed;
 	li{
-		width:33.33%;
-		float:left;
 		.glyphicon-wrapper{
 			margin-bottom:@line-height-computed/2;
+			background-color:#fff;
+			.glyphicon{
+				color:#16476F;
+			}
 		}
+	}
+	// @SCREEN-SM-MIN
+	@media (min-width:@screen-sm-min){
+		li{
+			width:33.33%;
+			float:left;
+		}
+		width:50%;
 	}
 	// @SCREEN-MD-MIN
 	@media (min-width:@screen-md-min){
 		width:50%;
+	}
+	// @SCREEN-LG-MIN
+	@media (min-width:@screen-lg-min){
+		width:33.33%;
 	}
 }
 
@@ -63,6 +82,7 @@
 }
 
 .about-press{
+	margin-bottom:@line-height-computed*2;
 	li{
 		p{
 			font-size:@font-size-small;

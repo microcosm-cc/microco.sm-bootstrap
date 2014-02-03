@@ -4,7 +4,7 @@
 
 .jumbotron{
 	text-align: center;
-	padding:0;
+	padding:@line-height-computed 0;
 	height:320px;
 	display:table;
 	width:100%;
@@ -13,19 +13,16 @@
 		display: table-cell;
 		vertical-align: middle;
 		color:#16476F;
-		height:440px;
-		&>img{
-			margin-bottom:@line-height-computed;
-		}
-
 	}
 }
 #homeview-jumbotron{
 	background: url('/static/img/faces-1.png') repeat-x center 45px;
 	border-bottom: 1px solid #EEE;
 	margin-bottom:0;
+
 	.jumbotron-text{
-			.text-headline{
+		height:440px;
+		.text-headline{
 			margin-top: 230px;
 		}
 	}
@@ -85,6 +82,9 @@
 	text-align: center;
 	padding:@padding-large-vertical;
 	width:100%;
+	h5{
+		color:#DD5E46;
+	}
 	&>img{
 		margin:@line-height-computed 0;
 		width:100%;
