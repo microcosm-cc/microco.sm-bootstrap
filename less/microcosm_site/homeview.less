@@ -16,17 +16,46 @@
 	}
 }
 #homeview-jumbotron{
-	background: url('/static/img/faces-1.png') repeat-x center 45px;
+	background-color:#fff;
 	border-bottom: 1px solid #EEE;
 	margin-bottom:0;
 
 	.jumbotron-text{
-		height:440px;
-		.text-headline{
-			margin-top: 230px;
+		height:430px;
+		.topic{
+			-webkit-transition: color 0.5s linear;
+			-moz-transition: color 0.5s linear;
+			transition: color 0.5s linear;
+		}
+	}
+	@media (min-width:@screen-md-min){
+		background: url('/static/img/faces-1.png') no-repeat center 45px;
+	}
+}
+
+.slider-faces{
+	width:100%;
+	margin:0 auto @line-height-computed;
+	position: relative;
+	height: 192px;
+	.face{
+		background:url('/static/img/faces-1-color.png') no-repeat 0 0 transparent;
+		height: 192px;
+		-webkit-transition: opacity 0.5s linear;
+		-moz-transition: opacity 0.5s linear;
+		transition: opacity 0.5s linear;
+		margin:0 auto
+	}
+	@media (min-width:@screen-md-min){
+		width:1025px;
+		.face{
+			margin:0;
+			position:absolute;
 		}
 	}
 }
+
+
 #homeview-body{
 	background-color: #ECF4F8;
 	padding-top:@line-height-computed;
@@ -149,3 +178,5 @@
 		}
 	}
 }
+
+
