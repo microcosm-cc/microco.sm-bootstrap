@@ -35,8 +35,15 @@
 .slider-nav{
 	margin-bottom:@line-height-computed;
 	&>ul{
+		list-style:none;
 		&>li{
 			padding-right:@padding-small-horizontal;
+			cursor:pointer;
+			&.active{
+				background-color:#fff;
+				border-top-right-radius: 3px;
+				border-bottom-right-radius: 3px;
+			}
 			img{
 				float: left;
 				margin-right:@padding-small-horizontal;
@@ -53,30 +60,22 @@
 
 .slider-container{
 	margin-bottom:@line-height-computed * 2;
+	max-width:@screen-md-min;
+	margin-right:auto;
+	margin-left:auto;
 	&>ul{
-		padding:0;
-		margin: 0 auto;
 		list-style: none;
-		max-width:@screen-md-min;
-		&>li{
-			border-radius: 3px;
-			box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-			margin-bottom:@line-height-computed;
-			overflow: auto;
-			border-bottom:1px solid #ccc;
-			background-color:#fff;
-		}
-	}
-	@media (min-width:@screen-md-min){
-		&>ul{
-			padding-top:@line-height-computed/2;
-		}
+		padding:0;
+		margin:0;
 	}
 }
 
 .slider-slides{
-	position:relative;
 	margin:@padding-small-horizontal;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	border-bottom:1px solid #ccc;
+	background-color:#fff;
 }
 .slider-slides-text{
 	text-align: center;
@@ -98,6 +97,37 @@
 		}
 	}
 }
+// swipe js
+.swipe {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > li {
+  float:left;
+  width:100%;
+  position: relative;
+}
+.slider-button {
+  position: absolute;
+  top: 40%;
+  padding: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  -webkit-user-select:none;
+  color:@brand-primary;
+  cursor:pointer;
+}
+.slider-button.slider-button-left {
+  left: 5px;
+}
+.slider-button.slider-button-right {
+  right: 5px;
+}
+
 
 .showcase{
 	margin-bottom:@line-height-computed * 2;
