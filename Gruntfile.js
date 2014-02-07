@@ -410,10 +410,10 @@ module.exports = function (grunt) {
   grunt.registerTask('test', testSubtasks);
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['concat', 'uglify']);
+  grunt.registerTask('dist-js', ['concat', 'uglify', 'copy:js']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['less', 'cssmin', 'csscomb', 'usebanner']);
+  grunt.registerTask('dist-css', ['less', 'cssmin', 'csscomb', 'usebanner', 'copy:css']);
 
   // Docs distribution task.
   grunt.registerTask('dist-docs', 'copy:docs');
