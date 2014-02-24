@@ -19,8 +19,8 @@
 	h3{
 		font-size:@font-size-base;
 		font-weight:700;
-		margin:@line-height-computed*0.8 @line-height-computed;
-		padding:0 0 @line-height-computed*0.8;
+		margin:(@line-height-computed*0.8) @line-height-computed;
+		padding:0 0 (@line-height-computed*0.8);
 		border-bottom:1px solid #eee;
 	}
 	form{
@@ -36,7 +36,7 @@
 			overflow: auto;
 		}
 		textarea{
-			min-height:@line-height-computed*3;
+			min-height: (@line-height-computed*3);
 		}
 	}
 	.create-form-inner{
@@ -56,7 +56,7 @@
 		max-width:380px;
 		margin:0;
 		float: left;
-		margin-right:@line-height-computed*2;
+		margin-right: (@line-height-computed*2);
 	}
 }
 
@@ -84,15 +84,12 @@
 	@media (min-width:@screen-sm-min){
 		float: left;
 		width: 250px;
-		padding-top:@line-height-computed*3;
+		padding-top: (@line-height-computed*3);
 	}
 }
 
 .create-footer{
 	padding:@line-height-computed 0;
-	margin-top:@line-height-computed * 4;
+	margin-top: (@line-height-computed*4);
 	font-size:@font-size-small;
 }
-
-
-

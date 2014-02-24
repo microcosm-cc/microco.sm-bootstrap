@@ -1,12 +1,12 @@
 .content-footer{
 	text-align: center;
-	padding:@padding-large-vertical * 2 0;
+	padding:(@padding-large-vertical * 2) 0;
 	color: #FFF;
 	background:url('/static/img/face-bg-2.png') repeat-x center center #298692;
 }
 
 .base-footer{
-	padding:@padding-large-vertical*4 0;
+	padding:(@padding-large-vertical*4) 0;
 
 	background-color: #2A2C2E;
 	color: #FFF;
@@ -38,6 +38,7 @@
 				display:block;
 				padding:@padding-large-vertical;
 				border:0;
+				background-color:lightgray;
 				background-color:rgba(0,0,0,0.2);
 				color:#666;
 			}
@@ -48,6 +49,7 @@
 			list-style: none;
 			border:0;
 			li{
+				background-color:lightgray;
 				background-color:rgba(0,0,0,0.2);
 				margin-bottom:@padding-small-vertical;
 				&:last-child{
@@ -97,7 +99,7 @@
 	@media (min-width:@screen-md-min){
 		&>li{
 			width:auto;
-			padding-right:@padding-large-horizontal * 2;
+			padding-right:(@padding-large-horizontal * 2);
 			min-width:100px;
 			width:75%/4;
 			&:first-child{
@@ -115,12 +117,14 @@
 	font-size:@font-size-small;
 
 	padding: 10px;
+	background-color: #BBBBBB;
 	background-color: rgba(0, 0, 0, 0.3);
 	border-radius: 5px;
 
 	.glyphicon{
 		float: right;
 		font-size: 18px;
+		color: #FEFEFE;
 		color: rgba(255, 255, 255, 0.1);
 	}
 
@@ -136,7 +140,7 @@
 		&:hover,
 		&:focus,
 		&:active{
-			color:#fff;
+			color:#FFFFFF;
 			box-shadow: none;
 		}
 	}

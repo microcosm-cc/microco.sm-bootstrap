@@ -5,7 +5,7 @@
 .dashboard{
 	background-color:@dashboard-bg-color;
 	padding:@line-height-computed;
-	padding-bottom:@line-height-computed*2;
+	padding-bottom: (@line-height-computed*2);
 }
 .dashboard-header{
 	h1{
@@ -30,7 +30,7 @@
 }
 .dashboard-left,
 .dashboard-right{
-	padding-top:@line-height-computed*0.8;
+	padding-top: (@line-height-computed*0.8);
 	padding-bottom:@line-height-computed;
 }
 
@@ -191,20 +191,21 @@
 	}
 }
 .dashboard-icon-permissions{
-	background-position:-@dashboard-icon-width*2 0;
+	background-position:(-@dashboard-icon-width*2) 0;
 	&.active{
-		background-position:-@dashboard-icon-width*2 -@dashboard-icon-height;
+		background-position:(-@dashboard-icon-width*2) -@dashboard-icon-height;
 	}
 }
 .dashboard-icon-notifications{
-	background-position:-@dashboard-icon-width*3 0;
+	background-position:(-@dashboard-icon-width*3) 0;
 	&.active{
-		background-position:-@dashboard-icon-width*3 -@dashboard-icon-height;
+		background-position:(-@dashboard-icon-width*3) -@dashboard-icon-height;
 	}
 }
 
 
 .dashboard-flash-message{
+	border: 2px dashed lightgray;
 	border: 2px dashed rgba(0,0,0,0.2);
 	padding: 10px;
 	margin-top: 10px;

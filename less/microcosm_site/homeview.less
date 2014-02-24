@@ -88,7 +88,7 @@
 }
 
 .slider-container{
-	margin-bottom:@line-height-computed * 2;
+	margin-bottom: (@line-height-computed * 2);
 	max-width:@screen-md-min;
 	margin-right:auto;
 	margin-left:auto;
@@ -146,6 +146,7 @@
   padding: 20px;
   background-color: #FFFFFF;
   box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  user-select:none;
   -webkit-user-select:none;
   color:@brand-primary;
   cursor:pointer;
@@ -159,7 +160,7 @@
 
 
 .showcase{
-	margin-bottom:@line-height-computed * 2;
+	margin-bottom:(@line-height-computed * 2);
 	&>ul{
 		&>li{
 			text-align: center;

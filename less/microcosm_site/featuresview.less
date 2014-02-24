@@ -15,7 +15,7 @@
 }
 
 #featuresview{
-	padding:@line-height-computed*2 0;
+	padding: (@line-height-computed*2) 0;
 	h3{
 		margin:0 0 @line-height-computed;
 	}
@@ -34,6 +34,7 @@
 		border-radius:3px;
 		&>li{
 			display:none;
+			user-select:none;
 			-webkit-user-select:none;
 			&.selected{
 				display:block;
@@ -43,6 +44,7 @@
 		&:hover{
 			&>li{
 				display:block;
+				user-select:inherit;
 				-webkit-user-select:inherit;
 				padding:5px;
 				border-bottom:1px solid #eee;
@@ -59,6 +61,7 @@
 			padding:0;
 			&>li{
 				display:block;
+				user-select:inherit;
 				-webkit-user-select:inherit;
 				padding:5px;
 				border-bottom:1px solid #eee;
