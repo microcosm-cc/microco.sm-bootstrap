@@ -1,18 +1,22 @@
 .content-section-title{
-	margin:0 auto @line-height-computed;
+	margin:@line-height-computed auto (@line-height-computed * 2);
 	text-align: center;
 	font-size:@font-size-large;
 	line-height: (@line-height-computed * 1.2);
 	font-weight:900;
-	//@SCREEN-SM-MIN
-	@media (min-width:@screen-sm-min){
-		margin:0 auto (@line-height-computed*2);
-		width: 60%;
-	}
-	//@SCREEN-MD-MIN
-	@media (min-width:@screen-lg-min){
-		margin:0 auto (@line-height-computed*2);
-		width: 37%;
+
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 48%, #999999 50%, #ffffff 52%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(48%,#ffffff), color-stop(50%,#999999), color-stop(52%,#ffffff), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 48%,#999999 50%,#ffffff 52%,#ffffff 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#ffffff 48%,#999999 50%,#ffffff 52%,#ffffff 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 48%,#999999 50%,#ffffff 52%,#ffffff 100%);
+	background: linear-gradient(to bottom, #ffffff 0%,#ffffff 48%,#999999 50%,#ffffff 52%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
+
+	&>span{
+		background-color:#fff;
+		padding:0 @line-height-computed;
 	}
 }
 
