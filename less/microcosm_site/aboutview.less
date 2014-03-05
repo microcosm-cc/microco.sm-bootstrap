@@ -34,14 +34,20 @@
 	}
 	// @SCREEN-LG-MIN
 	@media (min-width:@screen-lg-min){
-		width:33.33%;
+		max-width: 768px;
 	}
 }
 
-.about-text{
-	@media (min-width:@screen-sm-min){
-		.center-block();
-		width:50%;
+.about-intro{
+	&>h3{
+		margin-bottom: @line-height-computed * 2;
+		border-left: @line-height-computed solid @brand-danger;
+		padding-left:	@line-height-computed;
+		line-height:	@line-height-computed * 1.4;
+	}
+	&>p{
+		font-size:	@font-size-large;
+		line-height:	@line-height-computed * 1.4;
 	}
 }
 
@@ -95,10 +101,11 @@
 }
 
 .contact-block{
-	border: 1px solid #CCC;
-	border-width: 1px 0;
+	border-top: 1px solid #eee;
 	padding: 20px 0;
-	margin-top: 20px;
+	margin-top: @line-height-computed;
+	margin-bottom: @line-height-computed*2;
+
 	text-align: center;
 	strong{
 		color:#ccc;
