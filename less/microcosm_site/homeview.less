@@ -61,6 +61,11 @@
 	padding-top:@line-height-computed;
 }
 
+.benefits-header {
+	text-align: center;
+	margin-bottom:@line-height-computed;
+}
+
 .benefits {
 	margin-bottom:@line-height-computed;
 	border-radius: 3px;
@@ -88,106 +93,9 @@
 
 	h2 {
 		margin-top: @line-height-computed;
-	}
-}
-
-.slider-nav{
-	margin-bottom:@line-height-computed;
-	&>ul{
-		list-style:none;
-		&>li{
-			padding-right:@padding-small-horizontal;
-			cursor:pointer;
-			&.active{
-				background-color:#fff;
-				border-top-right-radius: 3px;
-				border-bottom-right-radius: 3px;
-			}
-			img{
-				float: left;
-				margin-right:@padding-small-horizontal;
-				border-radius:3px;
-				background-color:#fff;
-			}
-			p{
-				font-size:@font-size-small;
-				margin-bottom:0;
-			}
-		}
-	}
-}
-
-.slider-container{
-	margin-bottom: (@line-height-computed * 2);
-	max-width:@screen-md-min;
-	margin-right:auto;
-	margin-left:auto;
-	&>ul{
-		list-style: none;
-		padding:0;
-		margin:0;
-	}
-}
-
-.slider-slides{
-	margin:@padding-small-horizontal;
-	border-radius: 3px;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	border-bottom:1px solid #ccc;
-	background-color:#fff;
-}
-.slider-slides-text{
-	text-align: center;
-	padding:@padding-large-vertical;
-	width:100%;
-	h5{
 		color:#DD5E46;
 	}
-	&>img{
-		margin:@line-height-computed 0;
-		width:100%;
-	}
-	p{
-		color:#666;
-	}
-	@media (min-width:@screen-sm-min){
-		&>img{
-			width:auto;
-		}
-	}
 }
-// swipe js
-.swipe {
-  overflow: hidden;
-  position: relative;
-}
-.swipe-wrap {
-  overflow: hidden;
-  position: relative;
-}
-.swipe-wrap > li {
-  float:left;
-  width:100%;
-  position: relative;
-}
-.slider-button {
-  position: absolute;
-  top: 40%;
-  padding: 20px;
-  background-color: #FFFFFF;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.5);
-  user-select:none;
-  -webkit-user-select:none;
-  color:@brand-primary;
-  cursor:pointer;
-}
-.slider-button.slider-button-left {
-  left: 5px;
-}
-.slider-button.slider-button-right {
-  right: 5px;
-}
-
 
 .showcase{
 	margin-bottom:(@line-height-computed * 2);
