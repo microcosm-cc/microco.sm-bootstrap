@@ -61,6 +61,32 @@
 	padding-top:@line-height-computed;
 }
 
+.benefits {
+	margin-bottom:@line-height-computed;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	border-bottom:1px solid #ccc;
+	background-color:#fff;
+}
+
+.benefit {
+	margin-bottom:(@line-height-computed*2);
+
+	img {
+		width: 350px;
+	}
+
+	@media (min-width:@screen-md-min){
+		img {
+			width:auto;
+		}
+	}
+
+	div {
+		display: table-cell;
+	}
+}
+
 .slider-nav{
 	margin-bottom:@line-height-computed;
 	&>ul{
