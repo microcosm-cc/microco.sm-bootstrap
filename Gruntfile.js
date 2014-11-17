@@ -252,7 +252,7 @@ module.exports = function (grunt) {
         expand  : true,
         cwd     : 'dist/css/',
         src     : '**',
-        dest    : '../sitegen/static/css/',
+        dest    : '../microco.sm/static/css/',
         flatten : true,
         filter  : 'isFile',
       },
@@ -260,7 +260,7 @@ module.exports = function (grunt) {
         expand  : true,
         cwd     : 'dist/js/',
         src     : '**',
-        dest    : '../sitegen/static/js/',
+        dest    : '../microco.sm/static/js/',
         flatten : true,
         filter  : 'isFile',
       }
